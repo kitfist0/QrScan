@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="lightThemeColorBackground">#FFFFFF</color>
+    <color name="lightThemeColorPrimary">#3F51B5</color>
+    <color name="lightThemeColorOnPrimary">#EAEAEA</color>
+    <color name="lightThemeColorPrimaryDark">#F4F4F4</color>
+    <color name="lightThemeColorSurface">#F3F3F3</color>
+    <color name="lightThemeColorOnSurface">#404040</color>
+    <color name="lightThemeColorSecondary">#785CAA</color>
+    <color name="lightThemeColorSecondaryVariant">#40716D</color>
+    <color name="lightThemeColorError">#D05349</color>
+</resources>

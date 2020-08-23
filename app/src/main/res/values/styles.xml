@@ -1,0 +1,29 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="App.Light" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimaryDark">@color/lightThemeColorPrimaryDark</item>
+        <!-- colorPrimary: The primary brand color of your app -->
+        <item name="colorPrimary">@color/lightThemeColorPrimary</item>
+        <!-- colorOnPrimary: The color used for elements displayed on top of your primary colors -->
+        <item name="colorOnPrimary">@color/lightThemeColorOnPrimary</item>
+        <!-- colorSecondary: The secondary brand color of your app -->
+        <item name="colorSecondary">@color/lightThemeColorSecondary</item>
+        <!-- colorOnSecondary: The color used for elements displayed on top of your secondary colors -->
+        <item name="colorOnSecondary">@android:color/white</item>
+        <!-- colorSecondaryVariant: A lighter/darker variant of your secondary brand color -->
+        <item name="colorSecondaryVariant">@color/lightThemeColorSecondaryVariant</item>
+        <!-- colorError: The color used for errors (often a shade of red) -->
+        <item name="colorError">@color/lightThemeColorError</item>
+        <item name="colorOnError">@android:color/white</item>
+        <!-- The color used for surfaces (i.e. Material sheets, Cards) -->
+        <item name="colorSurface">@color/lightThemeColorSurface</item>
+        <item name="colorOnSurface">@color/lightThemeColorOnSurface</item>
+        <!-- The color behind all other screen content -->
+        <item name="android:colorBackground">@color/lightThemeColorBackground</item>
+
+        <item name="android:navigationBarColor" tools:targetApi="lollipop">@color/lightThemeColorPrimaryDark</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+    </style>
+
+</resources>

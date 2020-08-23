@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textTitle"
+        style="@style/TextAppearance.MaterialComponents.Headline6"
+        android:layout_margin="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="?colorSecondary"
+        android:text="¯\\_(ツ)_/¯"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textMessage"
+        style="@style/TextAppearance.MaterialComponents.Body1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/permission_rationale_camera" />
+
+    <LinearLayout
+        android:id="@+id/layout_with_buttons"
+        android:splitMotionEvents="true"
+        android:gravity="end"
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonCancel"
+            android:text="@android:string/cancel"
+            style="@style/Widget.MaterialComponents.Button.TextButton.Dialog"
+            android:textColor="?android:textColorPrimary"
+            android:layout_width="100dp"
+            android:layout_height="60dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonOpenSettings"
+            android:text="@string/open_settings"
+            style="@style/Widget.MaterialComponents.Button.TextButton.Dialog"
+            android:textColor="?android:textColorPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonOk"
+            android:text="@android:string/ok"
+            style="@style/Widget.MaterialComponents.Button.TextButton.Dialog"
+            android:textColor="?android:textColorPrimary"
+            android:layout_width="100dp"
+            android:layout_height="60dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
