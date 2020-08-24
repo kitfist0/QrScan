@@ -16,5 +16,7 @@ interface DetailsView: BaseView {
 
     fun setupFavoriteIcon(favorite: Boolean)
 
+    fun navigateToEditTitleDialog(title: String)
+
     fun popBackStack()
 }

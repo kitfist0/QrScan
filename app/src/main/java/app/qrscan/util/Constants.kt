@@ -4,6 +4,9 @@ object Constants {
     const val DATE_FORMAT_24H = "yyy MMM dd, HH:mm:ss"
     const val DATE_FORMAT_12H = "yyy MMM dd, hh:mm:ss aa"
 
+    const val TITLE_REQUEST_KEY = "title_request"
+    const val TITLE_RESULT_KEY = "title_result"
+
     const val PARSED_RESULT_UNKNOWN = "UNKNOWN"
 
     const val PREF_SAVE_TO_GALLERY = "save_to_gallery"

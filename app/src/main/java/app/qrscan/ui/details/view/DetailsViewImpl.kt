@@ -6,6 +6,7 @@ import android.view.View
 import android.widget.Toast
 import androidx.navigation.NavController
 import app.qrscan.ext.setFavoriteIcon
+import app.qrscan.ui.details.DetailsFragmentDirections
 import kotlinx.android.synthetic.main.fragment_details.view.*
 
 class DetailsViewImpl(
@@ -29,6 +30,10 @@ class DetailsViewImpl(
 
     override fun setupFavoriteIcon(favorite: Boolean) {
         rootView.favoriteButton.setFavoriteIcon(favorite)
+    }
+
+    override fun navigateToEditTitleDialog(title: String) {
+        navController.navigate(DetailsFragmentDirections.fromDetailsToEditTitle(title))
     }
 
     override fun popBackStack() {

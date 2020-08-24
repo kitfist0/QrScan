@@ -52,6 +52,9 @@
         <argument
             android:name="id"
             app:argType="long"/>
+        <action
+            android:id="@+id/from_details_to_edit_title"
+            app:destination="@id/navigation_edit_title" />
     </fragment>
 
     <dialog
@@ -60,6 +63,15 @@
         tools:layout="@layout/dialog_permission">
         <argument
             android:name="permission"
+            app:argType="string"/>
+    </dialog>
+
+    <dialog
+        android:id="@+id/navigation_edit_title"
+        android:name="app.qrscan.ui.dialogs.EditTitleDialog"
+        tools:layout="@layout/dialog_edit_title">
+        <argument
+            android:name="title"
             app:argType="string"/>
     </dialog>
 

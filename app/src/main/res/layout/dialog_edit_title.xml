@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.textfield.TextInputLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/textInputLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="@string/enter_text_here">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/textInputEditText"
+        android:background="@android:color/transparent"
+        android:lines="4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="start" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonOk"
+        android:background="?attr/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@android:string/ok" />
+
+</com.google.android.material.textfield.TextInputLayout>

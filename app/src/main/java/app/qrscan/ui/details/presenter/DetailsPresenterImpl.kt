@@ -46,8 +46,7 @@ class DetailsPresenterImpl(
     }
 
     override fun onEditTitleClicked() {
-        // TODO: show edit title dialog
-        view.showMessage(R.string.edit)
+        view.navigateToEditTitleDialog(qrModel.title)
     }
 
     override fun onDeleteButtonClicked() {
@@ -67,5 +66,8 @@ class DetailsPresenterImpl(
     override fun onShareButtonClicked() {
         // TODO: show share dialog
         view.showMessage(R.string.share)
+    }
+
+    override fun onTitleChangedResult(result: Bundle) {
     }
 }
