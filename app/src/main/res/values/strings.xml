@@ -3,6 +3,7 @@
     <string name="details">Details</string>
     <string name="edit">Edit</string>
     <string name="error">Error</string>
+    <string name="title">Title</string>
     <string name="empty_text_field">Empty text field</string>
     <string name="text_is_too_long">Entered text is too long</string>
     <string name="generate_default_text">My text</string>

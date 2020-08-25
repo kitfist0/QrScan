@@ -4,7 +4,7 @@
     android:id="@+id/textInputLayout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:hint="@string/enter_text_here">
+    android:hint="@string/title">
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/textInputEditText"

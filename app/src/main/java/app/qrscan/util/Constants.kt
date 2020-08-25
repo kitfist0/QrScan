@@ -6,6 +6,7 @@ object Constants {
 
     const val TITLE_REQUEST_KEY = "title_request"
     const val TITLE_RESULT_KEY = "title_result"
+    const val TITLE_MAX_LENGTH = 40
 
     const val PARSED_RESULT_UNKNOWN = "UNKNOWN"
 

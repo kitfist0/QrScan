@@ -1,10 +1,9 @@
 package app.qrscan.ui.details
 
-import android.os.Bundle
 import android.view.MenuItem
 import android.view.View
 import androidx.appcompat.widget.Toolbar
-import androidx.fragment.app.FragmentResultListener
+import androidx.fragment.app.setFragmentResultListener
 import app.qrscan.R
 import app.qrscan.ui.base.BaseFragment
 import app.qrscan.ui.details.presenter.DetailsPresenter
@@ -15,7 +14,7 @@ import kotlinx.android.synthetic.main.fragment_details.*
 
 @AndroidEntryPoint
 class DetailsFragment: BaseFragment<DetailsPresenter, DetailsView>(R.layout.fragment_details),
-        Toolbar.OnMenuItemClickListener, View.OnClickListener, FragmentResultListener {
+        Toolbar.OnMenuItemClickListener, View.OnClickListener {
 
     override fun setupViews() {
         super.setupViews()
@@ -26,11 +25,9 @@ class DetailsFragment: BaseFragment<DetailsPresenter, DetailsView>(R.layout.frag
         copyFab.setOnClickListener(this)
 
         toolbar.setOnMenuItemClickListener(this)
-    }
 
-    override fun onFragmentResult(requestKey: String, result: Bundle) {
-        when (requestKey) {
-            Constants.TITLE_REQUEST_KEY -> presenter.onTitleChangedResult(result)
+        setFragmentResultListener(Constants.TITLE_REQUEST_KEY) { _, bundle ->
+            presenter.onTitleChangedResult(bundle)
         }
     }
 

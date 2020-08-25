@@ -1,11 +1,14 @@
 package app.qrscan.ext
 
+import android.content.Context
 import android.content.SharedPreferences
 import android.text.Editable
 import android.text.TextWatcher
 import android.widget.EditText
 import android.widget.ImageButton
+import android.widget.Toast
 import androidx.annotation.DrawableRes
+import androidx.annotation.StringRes
 import app.qrscan.R
 import app.qrscan.data.db.QrModel
 import app.qrscan.util.Constants
@@ -15,6 +18,9 @@ import com.google.zxing.client.result.ParsedResultType
 import com.google.zxing.client.result.ResultParser
 import java.text.SimpleDateFormat
 import java.util.*
+
+internal fun Context.shortToast(@StringRes messageResource: Int) =
+    Toast.makeText(this, messageResource, Toast.LENGTH_SHORT).show()
 
 internal fun EditText.customAfterTextChanged(action: (String)-> Unit) =
     addTextChangedListener(object : TextWatcher {
