@@ -16,7 +16,7 @@ class HistoryFragment : BaseFragment<HistoryPresenter, HistoryView>(R.layout.fra
         historyRecycler.layoutManager = LinearLayoutManager(requireContext())
         historyRecycler.adapter = HistoryAdapter(
             itemClickListener = { presenter.onHistoryItemClicked(it) },
-            favButtonClickListener = { pos, id ->  presenter.onItemFavButtonClicked(pos, id) }
+            favButtonClickListener = { pos, model ->  presenter.onItemFavButtonClicked(pos, model) }
         )
     }
 }

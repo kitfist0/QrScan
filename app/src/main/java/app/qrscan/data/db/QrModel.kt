@@ -5,11 +5,11 @@ import androidx.room.PrimaryKey
 
 @Entity
 data class QrModel (
-        val time: Long,
-        val title: String,
-        val text: String,
-        val type: String,
-        val format: String
+    val time: Long,
+    var title: String,
+    val text: String,
+    val type: String,
+    val format: String
 ) {
     @PrimaryKey(autoGenerate = true)
     var id: Long = 0

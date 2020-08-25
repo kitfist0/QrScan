@@ -1,6 +1,7 @@
 package app.qrscan.ui.history.presenter
 
 import android.os.Bundle
+import app.qrscan.data.db.QrModel
 import app.qrscan.data.repository.QrModelRepository
 import app.qrscan.ui.history.view.HistoryView
 import kotlinx.coroutines.*
@@ -29,9 +30,9 @@ class HistoryPresenterImpl(
         view.navigateToDetails(id)
     }
 
-    override fun onItemFavButtonClicked(pos: Int, id: Long) {
+    override fun onItemFavButtonClicked(pos: Int, model: QrModel) {
         launch {
-            val favorite = repository.updateAndGetFavorite(id)
+            val favorite = repository.switchFavorite(model)
             withContext(Dispatchers.Main) { view.changeItemFavoriteIcon(pos, favorite) }
         }
     }

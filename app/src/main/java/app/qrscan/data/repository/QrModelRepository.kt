@@ -14,8 +14,13 @@ class QrModelRepository @Inject constructor(private val dao: QrDao) {
 
     suspend fun insertQrModel(model: QrModel): Long = dao.insert(model)
 
-    suspend fun updateAndGetFavorite(id: Long): Boolean = dao.updateAndGetFavorite(id)
-
     suspend fun deleteQrModel(model: QrModel) = dao.delete(model)
 
+    suspend fun updateQrModel(model: QrModel) = dao.update(model)
+
+    suspend fun switchFavorite(model: QrModel): Boolean {
+        val newValue = model.favorite.not().also { model.favorite = it }
+        dao.update(model)
+        return newValue
+    }
 }

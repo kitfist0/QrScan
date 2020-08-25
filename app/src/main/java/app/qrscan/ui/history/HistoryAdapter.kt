@@ -14,7 +14,7 @@ import kotlin.properties.Delegates
 
 class HistoryAdapter(
     private val itemClickListener: (id: Long) -> Unit,
-    private val favButtonClickListener: (pos: Int, id: Long) -> Unit
+    private val favButtonClickListener: (pos: Int, model: QrModel) -> Unit
 ) : RecyclerView.Adapter<HistoryAdapter.ViewHolder>(), AutoUpdatableAdapter {
 
     var items: List<QrModel> by Delegates.observable(emptyList()) { _, old, new ->
@@ -38,7 +38,7 @@ class HistoryAdapter(
             itemTitleText.text = item.title
             itemSubtitleText.text = item.text
             favoriteButton.setFavoriteIcon(item.favorite)
-            favoriteButton.setOnClickListener { favButtonClickListener.invoke(pos, item.id) }
+            favoriteButton.setOnClickListener { favButtonClickListener.invoke(pos, item) }
             setOnClickListener { itemClickListener.invoke(item.id) }
         }
     }

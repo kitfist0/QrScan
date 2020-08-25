@@ -2,12 +2,14 @@ package app.qrscan.ui.details.presenter
 
 import android.content.ClipData
 import android.content.ClipboardManager
+import android.content.Intent
 import android.os.Bundle
 import app.qrscan.R
 import app.qrscan.data.db.QrModel
 import app.qrscan.data.repository.QrModelRepository
 import app.qrscan.ui.details.DetailsFragmentArgs
 import app.qrscan.ui.details.view.DetailsView
+import app.qrscan.util.Constants
 import app.qrscan.util.EncodeUtil
 import kotlinx.coroutines.*
 import kotlin.coroutines.CoroutineContext
@@ -58,16 +60,27 @@ class DetailsPresenterImpl(
 
     override fun onFavoriteButtonClicked() {
         launch {
-            val favorite = repository.updateAndGetFavorite(qrModel.id).also { qrModel.favorite = it }
+            val favorite = repository.switchFavorite(qrModel).also { qrModel.favorite = it }
             withContext(Dispatchers.Main) { view.setupFavoriteIcon(favorite) }
         }
     }
 
     override fun onShareButtonClicked() {
-        // TODO: show share dialog
-        view.showMessage(R.string.share)
+        val sendIntent: Intent = Intent().apply {
+            action = Intent.ACTION_SEND
+            putExtra(Intent.EXTRA_TEXT, qrModel.text)
+            type = "text/plain"
+        }
+        view.showAndroidSharesheet(Intent.createChooser(sendIntent, null))
     }
 
     override fun onTitleChangedResult(result: Bundle) {
+        result.getString(Constants.TITLE_RESULT_KEY)?.let { title ->
+            launch {
+                qrModel.title = title
+                repository.updateQrModel(qrModel)
+                withContext(Dispatchers.Main) { view.setupToolbarTitle(title) }
+            }
+        }
     }
 }

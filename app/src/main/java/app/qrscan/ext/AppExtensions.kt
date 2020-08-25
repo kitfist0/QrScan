@@ -49,7 +49,7 @@ internal fun Result.toQrModel(): QrModel {
         null
     }
     return QrModel(
-            time = System.currentTimeMillis(),
+            time = time,
             title = title,
             text = parsedResult?.displayResult ?: text,
             type = parsedResult?.type?.name ?: Constants.PARSED_RESULT_UNKNOWN,

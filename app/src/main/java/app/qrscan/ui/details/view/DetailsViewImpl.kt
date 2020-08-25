@@ -1,6 +1,7 @@
 package app.qrscan.ui.details.view
 
 import android.content.Context
+import android.content.Intent
 import android.graphics.Bitmap
 import android.view.View
 import android.widget.Toast
@@ -34,6 +35,10 @@ class DetailsViewImpl(
 
     override fun navigateToEditTitleDialog(title: String) {
         navController.navigate(DetailsFragmentDirections.fromDetailsToEditTitle(title))
+    }
+
+    override fun showAndroidSharesheet(shareIntent: Intent) {
+        context.startActivity(shareIntent)
     }
 
     override fun popBackStack() {
