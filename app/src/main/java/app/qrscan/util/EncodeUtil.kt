@@ -1,7 +1,7 @@
 package app.qrscan.util
 
 import android.graphics.Bitmap
-import app.qrscan.data.db.QrModel
+import app.qrscan.data.db.entity.QrModel
 import app.qrscan.ext.toQrModel
 import com.google.zxing.*
 import com.google.zxing.common.HybridBinarizer

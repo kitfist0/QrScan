@@ -5,7 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import app.qrscan.R
-import app.qrscan.data.db.QrModel
+import app.qrscan.data.db.entity.QrModel
 import app.qrscan.ext.getDrawableRes
 import app.qrscan.ext.setFavoriteIcon
 import app.qrscan.util.AutoUpdatableAdapter

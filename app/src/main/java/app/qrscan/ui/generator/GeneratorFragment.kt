@@ -16,7 +16,7 @@ class GeneratorFragment: BaseFragment<GeneratorPresenter, GeneratorView>(R.layou
         textInputEditText.customAfterTextChanged {
             presenter.onTextChanged(it)
         }
-        textInputLayout.setEndIconOnClickListener {
+        buttonSave.setOnClickListener {
             presenter.onSaveButtonClicked()
         }
     }

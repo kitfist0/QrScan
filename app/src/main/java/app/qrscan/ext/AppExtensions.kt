@@ -10,7 +10,7 @@ import android.widget.Toast
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import app.qrscan.R
-import app.qrscan.data.db.QrModel
+import app.qrscan.data.db.entity.QrModel
 import app.qrscan.util.Constants
 import com.google.zxing.*
 import com.google.zxing.client.result.ParsedResult

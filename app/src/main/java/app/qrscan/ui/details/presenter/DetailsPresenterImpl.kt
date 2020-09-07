@@ -5,7 +5,7 @@ import android.content.ClipboardManager
 import android.content.Intent
 import android.os.Bundle
 import app.qrscan.R
-import app.qrscan.data.db.QrModel
+import app.qrscan.data.db.entity.QrModel
 import app.qrscan.data.repository.QrModelRepository
 import app.qrscan.ui.details.DetailsFragmentArgs
 import app.qrscan.ui.details.view.DetailsView

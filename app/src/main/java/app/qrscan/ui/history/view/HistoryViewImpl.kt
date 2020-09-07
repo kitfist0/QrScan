@@ -4,7 +4,7 @@ import android.content.Context
 import android.view.View
 import android.widget.Toast
 import androidx.navigation.NavController
-import app.qrscan.data.db.QrModel
+import app.qrscan.data.db.entity.QrModel
 import app.qrscan.ui.history.HistoryAdapter
 import app.qrscan.ui.history.HistoryFragmentDirections
 import kotlinx.android.synthetic.main.fragment_history.view.*

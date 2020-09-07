@@ -1,6 +1,6 @@
 package app.qrscan.ui.history.presenter
 
-import app.qrscan.data.db.QrModel
+import app.qrscan.data.db.entity.QrModel
 import app.qrscan.ui.base.presenter.BasePresenter
 
 interface HistoryPresenter: BasePresenter {

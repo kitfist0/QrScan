@@ -1,6 +1,9 @@
 package app.qrscan.util
 
 object Constants {
+    const val DATABASE_NAME = "qr-scan-database"
+    const val TABLE_NAME = "records"
+
     const val DATE_FORMAT_24H = "yyy MMM dd, HH:mm:ss"
     const val DATE_FORMAT_12H = "yyy MMM dd, hh:mm:ss aa"
 
@@ -13,6 +16,7 @@ object Constants {
     const val PREF_SAVE_TO_GALLERY = "save_to_gallery"
     const val PREF_VIBRATION = "vibration"
     const val PREF_SOUND = "sound"
+    const val PREF_THEME = "theme"
 
     const val IMAGE_SIZE = 1000
     const val DIFF_BETWEEN_SCANS_MS = 1000

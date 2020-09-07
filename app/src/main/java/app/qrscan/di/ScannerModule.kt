@@ -1,5 +1,6 @@
 package app.qrscan.di
 
+import android.app.Activity
 import android.content.Context
 import android.content.SharedPreferences
 import androidx.navigation.NavController
@@ -23,8 +24,8 @@ object ScannerModule {
 
     @Provides
     @FragmentScoped
-    fun provideView(context: Context, navController: NavController): ScannerView =
-            ScannerViewImpl(context, navController)
+    fun provideView(activity: Activity, navController: NavController): ScannerView =
+            ScannerViewImpl(activity, navController)
 
     @Provides
     @FragmentScoped

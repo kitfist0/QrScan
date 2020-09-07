@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">QrScan</string>
+    <string name="copy_text">Copy</string>
+    <string name="delete">Delete</string>
     <string name="details">Details</string>
     <string name="edit">Edit</string>
     <string name="error">Error</string>
@@ -18,4 +20,13 @@
     <string name="scan">Scan</string>
     <string name="copied_to_clipboard">Copied to clipboard</string>
     <string name="permission_rationale_camera">Provide camera permission to be able to scan</string>
+
+    <string name="email_us">Email us</string>
+    <string name="save_image_to_gallery">Save QR image to gallery</string>
+    <string name="privacy_policy">Privacy policy</string>
+    <string name="sound_feedback">Sound feedback</string>
+    <string name="theme">Theme</string>
+    <string name="theme_dark">Dark</string>
+    <string name="theme_light">Light</string>
+    <string name="vibration_feedback">Vibration feedback</string>
 </resources>

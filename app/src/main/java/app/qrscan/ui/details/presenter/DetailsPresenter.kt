@@ -1,7 +1,7 @@
 package app.qrscan.ui.details.presenter
 
 import android.os.Bundle
-import app.qrscan.data.db.QrModel
+import app.qrscan.data.db.entity.QrModel
 import app.qrscan.ui.base.presenter.BasePresenter
 
 interface DetailsPresenter: BasePresenter {

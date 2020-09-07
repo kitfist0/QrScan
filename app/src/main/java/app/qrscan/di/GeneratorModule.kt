@@ -1,6 +1,6 @@
 package app.qrscan.di
 
-import android.content.Context
+import android.app.Activity
 import androidx.navigation.NavController
 import app.qrscan.data.repository.QrModelRepository
 import app.qrscan.ui.generator.presenter.GeneratorPresenter
@@ -22,8 +22,8 @@ object GeneratorModule {
 
     @Provides
     @FragmentScoped
-    fun provideView(context: Context, navController: NavController): GeneratorView =
-            GeneratorViewImpl(context, navController)
+    fun provideView(activity: Activity, navController: NavController): GeneratorView =
+            GeneratorViewImpl(activity, navController)
 
     @Provides
     @FragmentScoped

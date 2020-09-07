@@ -1,6 +1,6 @@
 package app.qrscan.di
 
-import android.content.Context
+import android.app.Activity
 import androidx.navigation.NavController
 import app.qrscan.data.repository.QrModelRepository
 import app.qrscan.ui.history.presenter.HistoryPresenter
@@ -19,8 +19,8 @@ object HistoryModule {
 
     @Provides
     @FragmentScoped
-    fun provideView(context: Context, navController: NavController): HistoryView =
-            HistoryViewImpl(context, navController)
+    fun provideView(activity: Activity, navController: NavController): HistoryView =
+            HistoryViewImpl(activity, navController)
 
     @Provides
     @FragmentScoped

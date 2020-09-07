@@ -1,7 +1,7 @@
 package app.qrscan.data.repository
 
 import app.qrscan.data.db.QrDao
-import app.qrscan.data.db.QrModel
+import app.qrscan.data.db.entity.QrModel
 import javax.inject.Inject
 import javax.inject.Singleton
 

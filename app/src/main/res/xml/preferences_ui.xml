@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <SwitchPreference
+        android:key="@string/pref_save_to_gallery"
+        android:defaultValue="@bool/val_save_to_gallery"
+        android:title="@string/save_image_to_gallery"
+        android:icon="@drawable/ic_image" />
+
+    <SwitchPreference
+        android:key="@string/pref_vibration"
+        android:defaultValue="@bool/val_vibration_default"
+        android:title="@string/vibration_feedback"
+        android:icon="@drawable/ic_vibration" />
+
+    <SwitchPreference
+        android:key="@string/pref_sound"
+        android:defaultValue="@bool/val_sound_default"
+        android:title="@string/sound_feedback"
+        android:icon="@drawable/ic_music_note" />
+
+    <ListPreference
+        android:key="@string/pref_theme"
+        android:defaultValue="@string/val_theme_default"
+        android:title="@string/theme"
+        android:icon="@drawable/ic_palette"
+        android:entries="@array/pref_theme_labels"
+        android:entryValues="@array/pref_theme_values"
+        android:summary="%s"
+        tools:summary="@string/theme_light" />
+
+    <PreferenceCategory
+        app:allowDividerAbove="false">
+
+        <Preference
+            android:summary="@string/privacy_policy"
+            android:icon="@drawable/ic_policy">
+            <intent android:action="android.intent.action.VIEW"
+                android:data="@string/link_policy"/>
+        </Preference>
+
+        <Preference
+            android:summary="@string/email_us"
+            android:icon="@drawable/ic_alternate_email"/>
+
+        <Preference
+            android:summary="@string/version_name"
+            android:selectable="false"
+            android:icon="@drawable/ic_code"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

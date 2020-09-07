@@ -19,7 +19,8 @@ class MainActivity : AppCompatActivity(), NavController.OnDestinationChangedList
         setContentView(R.layout.activity_main)
 
         // https://stackoverflow.com/a/63297917/13865919
-        val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         val navController = navHostFragment.navController
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
@@ -30,18 +31,16 @@ class MainActivity : AppCompatActivity(), NavController.OnDestinationChangedList
         navController.addOnDestinationChangedListener(this)
     }
 
-    override fun onDestinationChanged(controller: NavController, destination: NavDestination, args: Bundle?) {
-        when (destination.id) {
+    override fun onDestinationChanged(navCon: NavController, dest: NavDestination, args: Bundle?) {
+        when (dest.id) {
             R.id.navigation_details -> hideNavIfNecessary()
             else -> showNavIfNecessary()
         }
     }
 
-    private fun showNavIfNecessary() = takeIf { bottomNavView.visibility == View.GONE }?.apply {
-        bottomNavView.visibility = View.VISIBLE
-    }
+    private fun showNavIfNecessary() = takeIf { bottomNavView.visibility == View.GONE }
+        ?.apply { bottomNavView.visibility = View.VISIBLE }
 
-    private fun hideNavIfNecessary() = takeIf { bottomNavView.visibility == View.VISIBLE }?.apply {
-        bottomNavView.visibility = View.GONE
-    }
+    private fun hideNavIfNecessary() = takeIf { bottomNavView.visibility == View.VISIBLE }
+        ?.apply { bottomNavView.visibility = View.GONE }
 }

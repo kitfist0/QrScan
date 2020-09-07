@@ -8,6 +8,7 @@
     <dimen name="card_corner_radius">8dp</dimen>
     <dimen name="card_content_padding">8dp</dimen>
 
+    <dimen name="qr_code_image_view_size_large">240dp</dimen>
     <dimen name="qr_code_image_view_size">180dp</dimen>
     <dimen name="box_stroke_width">2dp</dimen>
     <!-- Height of the bottom navigation -->

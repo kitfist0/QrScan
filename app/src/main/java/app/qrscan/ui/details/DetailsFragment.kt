@@ -22,7 +22,7 @@ class DetailsFragment: BaseFragment<DetailsPresenter, DetailsView>(R.layout.frag
         favoriteButton.setOnClickListener(this)
         deleteButton.setOnClickListener(this)
         shareButton.setOnClickListener(this)
-        copyFab.setOnClickListener(this)
+        copyButton.setOnClickListener(this)
 
         toolbar.setOnMenuItemClickListener(this)
 
@@ -43,7 +43,7 @@ class DetailsFragment: BaseFragment<DetailsPresenter, DetailsView>(R.layout.frag
             R.id.favoriteButton -> presenter.onFavoriteButtonClicked()
             R.id.deleteButton -> presenter.onDeleteButtonClicked()
             R.id.shareButton -> presenter.onShareButtonClicked()
-            R.id.copyFab -> presenter.onCopyButtonClicked()
+            R.id.copyButton -> presenter.onCopyButtonClicked()
         }
     }
 }

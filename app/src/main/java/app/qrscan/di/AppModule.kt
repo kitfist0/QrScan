@@ -7,6 +7,7 @@ import androidx.preference.PreferenceManager
 import androidx.room.Room
 import app.qrscan.data.db.QrDao
 import app.qrscan.data.db.QrDatabase
+import app.qrscan.util.Constants
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -29,7 +30,7 @@ object AppModule {
     @Provides
     @Singleton
     fun provideDatabase(app: Application): QrDatabase {
-        return Room.databaseBuilder(app, QrDatabase::class.java, "qr_scanner-database")
+        return Room.databaseBuilder(app, QrDatabase::class.java, Constants.DATABASE_NAME)
                 .fallbackToDestructiveMigration()
                 .allowMainThreadQueries()
                 .build()

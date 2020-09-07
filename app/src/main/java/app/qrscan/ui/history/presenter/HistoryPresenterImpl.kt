@@ -1,7 +1,7 @@
 package app.qrscan.ui.history.presenter
 
 import android.os.Bundle
-import app.qrscan.data.db.QrModel
+import app.qrscan.data.db.entity.QrModel
 import app.qrscan.data.repository.QrModelRepository
 import app.qrscan.ui.history.view.HistoryView
 import kotlinx.coroutines.*

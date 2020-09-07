@@ -1,6 +1,14 @@
 package app.qrscan.ui.settings
 
-import androidx.fragment.app.Fragment
+import android.os.Bundle
+import androidx.preference.PreferenceFragmentCompat
 import app.qrscan.R
+import dagger.hilt.android.AndroidEntryPoint
 
-class SettingsFragment : Fragment(R.layout.fragment_settings)
+@AndroidEntryPoint
+class SettingsFragment : PreferenceFragmentCompat() {
+
+    override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
+        addPreferencesFromResource(R.xml.preferences_ui)
+    }
+}

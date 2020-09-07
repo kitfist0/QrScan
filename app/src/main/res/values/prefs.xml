@@ -1,0 +1,17 @@
+<resources>
+    <string name="pref_save_to_gallery">save_to_gallery</string>
+    <bool name="val_save_to_gallery">false</bool>
+
+    <string name="pref_vibration">vibration</string>
+    <bool name="val_vibration_default">true</bool>
+
+    <string name="pref_sound">sound</string>
+    <bool name="val_sound_default">true</bool>
+
+    <string name="pref_theme">theme</string>
+    <string name="val_theme_dark">dark</string>
+    <string name="val_theme_light">light</string>
+    <string name="val_theme_default">light</string>
+
+    <string name="link_policy">https://termly.io/resources/templates/privacy-policy-template/</string>
+</resources>

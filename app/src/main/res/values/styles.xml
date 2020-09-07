@@ -21,9 +21,21 @@
         <!-- The color behind all other screen content -->
         <item name="android:colorBackground">@color/lightThemeColorBackground</item>
 
+        <item name="preferenceTheme">@style/AppPreferenceTheme</item>
+
         <item name="android:navigationBarColor" tools:targetApi="lollipop">@color/lightThemeColorPrimaryDark</item>
         <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
         <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+    </style>
+
+    <!-- Custom Preference Theme -->
+    <style name="AppPreferenceTheme" parent="@style/PreferenceThemeOverlay.v14.Material">
+        <item name="preferenceFragmentCompatStyle">@style/AppPreferenceFragmentCompatStyle</item>
+    </style>
+
+    <!-- Custom Style for PreferenceFragmentCompat -->
+    <style name="AppPreferenceFragmentCompatStyle" parent="@style/PreferenceFragment.Material">
+        <item name="android:layout">@layout/fragment_base_settings</item>
     </style>
 
 </resources>

@@ -1,5 +1,6 @@
 package app.qrscan.di
 
+import android.app.Activity
 import android.content.ClipboardManager
 import android.content.Context
 import androidx.navigation.NavController
@@ -23,8 +24,8 @@ object DetailsModule {
 
     @Provides
     @FragmentScoped
-    fun provideView(context: Context, navController: NavController): DetailsView =
-            DetailsViewImpl(context, navController)
+    fun provideView(activity: Activity, navController: NavController): DetailsView =
+            DetailsViewImpl(activity, navController)
 
     @Provides
     @FragmentScoped
